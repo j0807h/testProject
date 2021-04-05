@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="banjjok.mapper.HotelBookMapper">
+<sql id="bookCol">
+	RESERV_CODE, PET_ID, MEM_ID, ROOM_CODE, CHK_IN_DATE, CHK_OUT_DATE, RESERV_DATE, RESERV_DESC, SITTER_ID 
+</sql>
+<sql id="bookListCol">
+	RESERV_CODE, CHK_IN_DATE, CHK_OUT_DATE, RESERV_DATE, RESERV_DESC, RESERV_USE
+</sql>
+<sql id="paymentH">
+	RESERV_CODE, ROOM_PRICE, ADD_PRICE, TOTAL_PRICE, PAY_METHOD
+</sql>
+
+
+<select id="createCode" resultType="string">
+	select to_char(SYSDATE, 'YYMMDD') || LPAD(RESERVE_HOTEL_SEQ.NEXTVAL,3,0) from dual
+</select>
+
+<insert id="insertBook" parameterType="banjjok.domain.HotelBookDTO">
+	insert into RESERVE_HOTEL ( <include refid="bookCol" /> )
+	values ( #{reservCode}, #{petId}, #{memId}, #{roomCode}, #{chkInDate}, #{chkOutDate}, SYSDATE, #{reservDesc}, #{sitterId} )
+</insert>
+<insert id="insertBookList" parameterType="banjjok.domain.HotelBookDTO">
+	insert into RESERVE_LIST_HOTEL ( <include refid="bookListCol" /> )
+	values ( #{reservCode}, #{chkInDate}, #{chkOutDate}, SYSDATE, #{reservDesc}, '1' )
+</insert>
+
+<!-- 			결제정보 -->
+<!-- 			, ADD_PRICE addPrice, TOTAL_PRICE totalPrice, PAY_METHOD payMethod -->
+<select id="getBookInfoList" parameterType="banjjok.domain.MemHotelBookDTO" resultType="banjjok.domain.MemHotelBookDTO">
+	select RESERV_CODE reservCode, p.PET_ID petId, PET_NAME petName, m.MEM_ID memId, MEM_NAME memName, ROOM_CODE roomCode,
+			CHK_IN_DATE chkInDate, CHK_OUT_DATE chkOutDate, RESERV_DATE reservDate, RESERV_DESC reservDesc, SITTER_ID sitterId
+		from my_pet p join reserve_hotel rh
+		on p.pet_id = rh.pet_id
+	join member m
+	on rh.mem_id = m.mem_id
+	<trim prefix="where" prefixOverrides="AND|OR">
+		m.mem_id = #{memId}
+	</trim>
+</select>
+
+<insert id="insertPayment" parameterType="banjjok.domain.HotelPaymentDTO">
+	insert into PAYMENT_HOTEL ( <include refid="paymentH" /> )
+	values ( #{reservCode}, #{roomPrice}, null, #{totalPrice}, #{payMethod} )
+</insert>
+</mapper>

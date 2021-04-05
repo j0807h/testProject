@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="banjjok.mapper.MyPetMapper">
+<sql id="petColumn">
+	PET_ID, MEM_ID, PET_NAME, KIND, WEIGHT, AGE, GENDER, IS_NEUTRAL, MICRO_NUM, PET_DESC, pet_rep
+</sql>
+<sql id="selectColumn">
+	PET_ID PETID, MEM_ID MEMID, PET_NAME PETNAME, KIND KIND, WEIGHT WEIGHT, AGE AGE, GENDER GENDER, IS_NEUTRAL ISNEUTRAL, MICRO_NUM MICRONUM, PET_DESC PETDESC, pet_rep petrep
+</sql>
+<insert id="insertMyPet" parameterType="banjjok.domain.MyPetDTO">
+	insert into my_pet (<include refid="petColumn" />)
+	values(pet_seq.nextval, #{memId}, #{petName}, #{kind}, #{weight}, #{age}, #{gender}, #{isNeutral}, #{microNum}, #{petDesc}, #{petRep})
+</insert>
+<select id="getMyPet" parameterType="banjjok.domain.MyPetDTO" resultType="banjjok.domain.MyPetDTO">
+	select <include refid="selectColumn" />
+	from my_pet
+	<trim prefix="where" prefixOverrides="AND | OR">
+		and mem_id = #{memId}
+	</trim>
+</select>
+<update id="updatePet" parameterType="banjjok.domain.MyPetDTO">
+	update my_pet
+	set age = #{age}, gender = #{gender}, weight = #{weight}, micro_num = #{microNum}, pet_desc = #{petDesc}, pet_name = #{petName}
+	where mem_id = #{memId} and pet_id = #{petId}
+</update>
+<delete id="delete" parameterType="banjjok.domain.MyPetDTO">
+	delete from my_pet
+	where pet_id = #{petId} and mem_id = #{memId}
+</delete>
+</mapper>

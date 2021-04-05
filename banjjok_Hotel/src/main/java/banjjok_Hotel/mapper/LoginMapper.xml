@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="banjjok.mapper.LoginMapper">
+<select id="getUsers" parameterType="banjjok.domain.LoginDTO" resultType="banjjok.domain.LoginDTO">
+	select desn_id userId, desn_pw userPw, desn_name userName, desn_use grade
+	from designer
+	where desn_id = #{userId}
+	union 
+	select mem_id, mem_pw, mem_name, 'mem'
+	from member
+	where mem_id = #{userId} and mem_use = 1
+	union
+	select sitter_id, sitter_pw, sitter_name, 'sitter'
+	from PET_SITTER
+	where sitter_id = #{userId}
+	union
+	select t_id, t_pw, t_name, t_nic
+	from TEACHER
+	where t_id = #{userId}
+</select>
+</mapper>

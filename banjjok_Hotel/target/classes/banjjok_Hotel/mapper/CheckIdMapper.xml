@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="banjjok.mapper.CheckIdMapper">
+<select id="checkId" parameterType="string" resultType="banjjok.domain.LoginDTO">
+	select desn_id userId
+	from designer
+	where desn_id = #{userId}
+	union 
+	select mem_id
+	from member
+	where mem_id = #{userId}
+	union
+	select sitter_id
+	from PET_SITTER
+	where sitter_id = #{userId}
+	union
+	select t_id
+	from TEACHER
+	where t_id = #{userId}
+</select>
+</mapper>
