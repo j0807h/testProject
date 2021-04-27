@@ -15,7 +15,7 @@
 	<h3>수강신청 도우미 사이트</h3>
 </header>
 <section>
-	<form action="">
+	<form action="ModifyAc.jh" name="frm" method="post">
 		
 		<table border="1">
 		<caption><h2>교과목 수정</h2></caption>

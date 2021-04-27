@@ -127,9 +127,10 @@ public class CourseDAO {
 		CourseDTO dto = new CourseDTO();
 		try {
 			con = getconnection();
-			sql = " delete * from course_tbl where id=? ";
+			sql = " delete from course_tbl where id=? ";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
+			pstmt.executeQuery();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -153,7 +154,29 @@ public class CourseDAO {
 			pstmt.setInt(6, Integer.parseInt(req.getParameter("StartHour")));
 			pstmt.setInt(7, Integer.parseInt(req.getParameter("endHour")));
 			pstmt.executeQuery();
-			System.out.println("등록");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+	}
+
+	public void updateCourse(HttpServletRequest req) {
+		try {
+			con = getconnection();
+			sql = " update course_tbl set name=?, CREDIT=?, LECTURER=?, WEEK=?, START_HOUR=?, END_END=? "
+					+ " where id=? ";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,req.getParameter("name") );
+			pstmt.setString(2, req.getParameter("credit"));
+			pstmt.setInt(3, Integer.parseInt(req.getParameter("lecturer")));
+			pstmt.setInt(4, Integer.parseInt(req.getParameter("week")));
+			pstmt.setInt(5, Integer.parseInt(req.getParameter("StartHour")));
+			pstmt.setInt(6, Integer.parseInt(req.getParameter("endHour")));
+			pstmt.setString(7, req.getParameter("id"));
+			pstmt.executeQuery();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
