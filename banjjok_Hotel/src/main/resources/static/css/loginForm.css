@@ -1,0 +1,156 @@
+@charset "UTF-8";
+@charset "UTF-8";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+/* 	width: 1140px; */
+	margin: 0 auto;
+	font-family: Malgun Gothic;
+	font-size: 16px;
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+ul, li {
+	list-style: none;
+}
+
+/* 타이틀 */
+#topWrapper {
+	margin: 10px 0;
+}
+
+#topWrapper a {
+	font-size: 12px;
+	border: 1px solid #e1e1e1;
+	border-radius: 10px;
+	padding: 3px 8px;
+}
+
+#topWrapper a span {
+	font-weight: 900;
+}
+
+#topWrapper h2 {
+/* 	margin-top: 50px; */
+	padding: 0 0 20px;
+	text-align: center;
+	border-bottom: 1px solid #e1e1e1;
+	font-size: 24px;
+}
+
+#topWrapper h2 .logoImage {
+	border: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 300px;
+	height: 100px;
+	display: block;
+	background-size: 300px 100px;
+	background-repeat: no-repeat;
+}
+
+/* 로그인 */
+#LoginWrapper {
+	text-align: center;
+}
+
+#LoginWrapper .LoginNavi {
+	display: inline-block;
+	margin-top: 10px;
+}
+
+#LoginWrapper .LoginNavi a {
+	padding: 10px 50px;
+	margin: 10px 0;
+	float: left;
+	border: 1px solid;
+	border-radius: 0 5px 5px 0;
+	background: #eee;
+	border-color: #e1e1e1;
+	float: left;
+}
+
+#LoginWrapper .LoginNavi a:first-child {
+	border-radius: 5px 0 0 5px;
+	border-right: none;
+	background: none;
+}
+
+#LoginWrapper .LoginDataWrap form div {
+	padding : 5px;
+	color : red;
+	font-size : 12px;
+}
+
+#LoginWrapper .LoginDataWrap form input {
+	line-height: 30px;
+	width: 410px;
+	padding: 5px 10px;
+	border-radius: 0 0 5px 5px;
+/* 	border: 1px solid #e1e1e1; */
+	border: none;
+	border-bottom:  2px solid #adadad; 
+	padding: 10px 10px;
+	margin: 10px;
+	font-size: 16px;
+}
+
+#LoginWrapper .LoginDataWrap form input:first-child {
+	border-radius: 5px 5px 0 0;
+/* 	border-bottom: none; */
+}
+
+#LoginWrapper .LoginDataWrap form a {
+	margin: 20px auto 10px;
+	padding: 5px 0;
+	display: block;
+	width: 430px;
+	line-height: 30px;
+	background: #abc;
+	color: #fff;
+	border-radius: 5px;
+}
+#LoginWrapper .LoginDataWrap .loginButton {
+	margin: 20px auto 10px;
+	padding: 5px 0;
+	display: block;
+	width: 430px;
+	line-height: 30px;
+/* 	background: #80BA8E; */
+	color: #fff;
+	border-radius: 5px;
+	background: linear-gradient(125deg,#04B486,#DA81F5,#FFBF00);
+ 	background-position: left;
+ 	background-size: 200%;
+ 	border: none;
+}
+
+/* 아이디 찾기 */
+#bottomWrapper {
+	text-align: center;
+}
+
+#bottomWrapper ul {
+	width: 430px;
+	margin: 0 auto;
+	font-size: 12px;
+}
+
+#bottomWrapper ul li {
+	display: inline-block;
+	padding: 0 5px;
+	border-left: 1px solid #e1e1e1;
+}
+
+#bottomWrapper ul li:first-child {
+	border: none;
+}

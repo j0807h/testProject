@@ -1,0 +1,130 @@
+@charset "UTF-8";
+div.wrapper{
+	margin:0px;
+	padding:0px;
+}
+.topmenu{
+	margin:0px;
+	padding:0px;
+	height:220px;
+	
+}
+.topmenu1{
+	margin:0px auto;
+	padding:0px;
+	padding-top:20px;
+	letter-spacing:normal;
+	text-align:right;
+}
+div.tm{
+	display:inline-block;
+	width : 170px;
+	height : 40px;
+	line-height: 40px;
+	background : #66CDAA;
+	text-align:center;
+	border-radius:10px 20px;
+	overfolw:hidden;
+	object-fit:cover;
+	font-size:large;
+	font-weight:550;
+}
+.logo{
+	margin:0px;
+	padding-left:300px;
+}
+a {
+	 text-decoration:none;
+	 color:#464646;
+}
+a.alogo:hover{
+	background-color:#FFFFFF;
+}
+a:hover{
+	background-color:#aaaaaa;
+}
+a:active{
+	background-color:#aaaaaa;
+}
+.mainmenu {
+	text-align:center;
+	display: flex;
+	background-color: #FAEBD7;
+	height:50px;
+	line-height: 50px;
+	font-size:x-large;
+}
+
+div.mm {
+	flex: 1;
+	font-weight:bold;
+}
+footer{
+	text-align:center;
+	background-color:#d2d2d2;
+	height:50px;
+	line-height: 50px;
+}
+div.content{
+	margin:0px;
+	padding:100px;
+	text-align:center;
+}
+.title{
+	margin:0px;
+	padding:0px;
+	font-family:'Mistral';
+	font-size:50px;
+	text-align:center;
+}
+.about{
+	font-fasmily:'Franklin Gothic Book';
+	line-height:180%;
+	padding : -20px;
+	margin:0;
+}
+hr{
+	width:800px;
+	background : #66CDAA;
+	height:1px;
+}
+div.aboutphoto1{
+	padding-top:50px;
+	margin:0;
+	
+}
+div.aboutphoto2{
+	padding:0px;
+	margin:0px;
+/*     left:       100px; */
+/*     bottom:     0; */
+    width: 100%;
+/*     height: 3300px; */
+	position :absolute;
+	left:500px;
+	top:980px;
+	bottom: 0;
+}
+/* .aboutphoto2 .front { */
+/* 	position: absolute; */
+/* 	bottom: 0; */
+/* 	right: 0; */
+/* } */
+.program{
+	margin:30px;
+	padding:0px;
+}
+.mainProgram{
+	margin:auto;
+	table-layout:fixed;
+	text-align:center;
+	width:60%;
+	border-top:3px solid #FAEBD7;
+	border-collapse:collapse;
+	background-color:#FFFAFA;
+}
+
+th, td{
+	border-bottom:3px solid #FAEBD7;
+	padding:10px;
+}

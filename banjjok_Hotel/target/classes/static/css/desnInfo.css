@@ -1,0 +1,128 @@
+@charset "UTF-8";
+.navigationField {
+  font-weight: bold;
+}
+
+.content {
+  /* width: 1000px; */
+  width: 620px;
+  margin: 0 auto;
+}
+
+.titleWrap {
+  text-align: center;
+}
+
+.titleWrap .title {
+  margin-top: 30px;
+}
+
+.titleWrap .title h2 {
+  font-size: 2em;
+}
+
+.titleWrap .fieldDesc {
+  padding-top: 10px;
+}
+
+.designerInfoWrap {
+  margin-top: 80px;
+}
+
+.desingerArea {
+  margin-bottom: 30px;
+}
+
+.desingerArea img {
+  display: block;
+  width: 250px;
+  height: 250px;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.desingerArea span {
+  padding: 0 0 0 50px;
+}
+
+.desingerArea .name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.storeArea td{
+  padding: 0 0 10px 20px;
+}
+
+.descArea {
+  margin: 30px 0 30px 20px;
+}
+
+.designerHeartArea {
+  text-align: center;
+  margin: 0 auto;
+  border: 1px solid;
+  width: 600px;
+  line-height: 35px;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
+.designerHeartArea a {
+  margin: auto;
+}
+
+.designerHeartArea img {
+  /* display: inline-block; */
+  width: 20px;
+  height: 20px;
+  background: #eee;
+}
+
+.heartCount {
+  display: inline;
+  padding-left: 10px;
+}
+
+.styleBookArea {
+  margin: 30px 0 100px;
+  padding-left: 20px;
+}
+
+.styleBookArea .styleBook {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.styleBook li {
+  /* padding-left: 20px; */
+  position: relative;
+}
+
+.styleBook li .styleImg{
+  display: block;
+  width: 200px;
+  height: 200px;
+  background: #eee;
+}
+
+.styleBook li .heart {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  display: block;
+  width: 30px;
+  height: 30px;
+/*   background: #fff; */
+}
+
+/* .fa-heart { */
+/* 	text-indent: -9999px; */
+/* } */
+
+.fa-heart::before{
+   content:"\f004"; 
+   font-family: "Font Awesome 5 Free";
+   font-weight: 900;
+   padding-right: 10px;
+}

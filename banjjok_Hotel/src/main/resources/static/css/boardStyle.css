@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+
+	font-family: Malgun Gothic;
+	font-size: 16px;
+	margin: 0 auto;
+	color: #333;
+}
+
+a {
+	text-decoration: none;
+	color: #333;
+}
+
+ul, li {
+	list-style: none;
+}
+
+/* 네비게이션 */
+.Navigation {
+	width : 1140px;
+	margin : 0 auto;
+}
+.Navigation ul {
+	text-align: right;
+}
+
+.Navigation ul>li {
+	display: inline-block;
+	padding: 5px 10px;
+}
+
+.Navigation ul>li:first-child {
+	border-right: 1px solid #eee;
+}
+
+/* 타이틀 */
+.title {
+	margin: 30px 0 100px;
+	text-align: center;
+}
+
+/*장바구니*/
+.orderListArea {
+	width : 1140px;
+	margin : 0 auto;
+}
+.orderListArea h3{
+	padding: 0 0 5px 10px;
+	font-size: 14px;
+}
+table{
+	border: 0;
+	border-top-color: #e1e1e1;
+	border-top: 1px solid #e1e1e1;
+	border-bottom: 1px solid #e1e1e1;
+}
+table td{
+	padding: 5px 10px;
+	border: 0;
+	color: #666;
+	vertical-align: middle;
+	border-top: 1px solid #eaeaea;
+}
+table th:first-child{
+	border-left: none;
+}
+table th{
+	padding: 10px 0;
+	border: 0;
+	color: #999;
+	vertical-align: middle;
+}
+input[type=checkbox]{
+	width: 13px;
+	height: 13px;
+	border: 0;
+}
+table .right{
+	text-align: right;
+}
+table tfoot td{
+	padding: 15px 10px 17px;
+	background: #fbfafa;
+}
+table tfoot td .gLeft{
+	float: left;
+	margin: 6px 0 0 ;
+}
+table tfoot td .txt{
+	margin-left: 10px;
+	color: #000;
+}
+table tbody{
+	text-align: center;
+}
+table tbody td{
+	padding-left: 5px;
+	padding-right: 5px;
+	padding: 12px 10px 11px;
+}
+table tbody td .thumb{
+	position: relative;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+table tbody .thumb a{
+	display: block;
+	width : 70px;
+	height : 70px;
+}
+table tbody .thumb a img {
+	width : 100%;
+	height : 100%;
+}
+table tbody td .left{
+	padding-left: 10px;
+}
+table tbody td a{
+	margin: 9px 0 0 ;
+	line-height: 16px;
+}
+table tbody td a strong{
+	color: #353535;
+}
+table tbody .right{
+	padding-right: 10px;
+}
+table tbody .qty{
+	position: relative;
+	display:inline-block;
+	width: 50px;
+	margin: 0 1px 0 0;
+	text-align: left;
+}
+table tbody .qty input{
+	width: 40px;
+	hegith: 23px;
+	padding: 0 0 0 5px;
+	line-height: 25px;
+	border: 1px solid #e1e1e1;
+	border-radius: 3px;
+}
+table tbody .qty button {
+	width : 20px;
+	height : 13px;
+	font-size : 12px;
+}
+table tbody .qty .up{
+	position:absolute;
+	left: 27px;
+	top: 0;
+}
+table tbody .qty .down{
+	position:absolute;
+	left: 27px;
+	bottom: 0;
+}
+table tbody .button a{
+	height: 22px;
+	line-hright:20px;
+	padding: 3px 8px 0;
+	display: block;
+	border: 1px solid #e1e1e1;
+}
+table tbody .button a:first-child{
+	border: 1px solid #abc;
+	background: #abc;
+}
+
+/* 선택상품 제어 */
+.selectProductWrap {
+	padding: 10px 0;
+	text-align:center;
+	margin-bottom: 40px;
+}
+.selectProductWrap .gLeft{
+	float: left;
+	text-align: left;
+}
+.selectProductWrap .gRight{
+	float: right;
+	text-align: right;
+}
+.selectProductWrap a{
+	border: 1px solid #e1e1e1;
+	padding: 3px 10px;
+	background: #e1e1e1;
+}
+.selectProductWrap:after{
+	content:"";
+	display:block;
+	clear: both;
+}
+
+/* 총 주문금액 */
+.totalPriceWrap table{
+	border-color: #777;
+}
+.totalPriceWrap table th{
+	height: 39px;
+	border-left: 0;
+}
+.totalPriceWrap table td{
+	height: 58px;
+}
+
+/*주문버튼*/
+.orderButtonWrap{
+	text-align: center;
+	margin: 30px 0 100px;
+	position: relative;
+}
+.orderButtonWrap a{
+	border: 1px solid #e1e1e1;
+	background: #e1e1e1;
+	margin: 10px o;
+	text-align: center;
+	width: 150px;
+	line-height: 50px;
+	display: inline-block;
+	font-weight: bold;
+}
+.orderButtonWrap a:first-child{
+	border: 1px solid #abc;
+	background: #abc;
+}
+.orderButtonWrap .gRight{
+	position: absolute;
+	top: 0;
+	right: 0;
+}

@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="banjjok.mapper.PetSitterMapper">
+<mapper namespace="banjjok_Hotel.mapper.PetSitterMapper">
 <sql id="baseColumn">
 	SITTER_ID, SITTER_PW, SITTER_NAME, SITTER_IMG, SITTER_PH, SITTER_OFF, SITTER_ENTER, SITTER_REG, SITTER_LEAVE, SITTER_USE
 </sql>
 <sql id="baseColumn2">
 	SITTER_ID sitterId, SITTER_PW sitterPw, SITTER_NAME sitterName, SITTER_IMG sitterImg, SITTER_PH sitterPh, SITTER_OFF sitterOff, SITTER_ENTER sitterEnter, SITTER_REG sitterReg, SITTER_LEAVE sitterLeave, SITTER_USE sitterUser
 </sql>
-<insert id="insertSitter" parameterType="banjjok.domain.PetSitterDTO">
+<insert id="insertSitter" parameterType="banjjok_Hotel.domain.PetSitterDTO">
 	insert into pet_sitter ( <include refid="baseColumn" /> )
 	values ( #{sitterId}, #{sitterPw}, #{sitterName}, #{sitterImg}, #{sitterPh}, #{sitterOff}, #{sitterEnter}, sysdate, null, '1' )
 </insert>
-<select id="getSitterList" parameterType="banjjok.domain.PetSitterDTO" resultType="banjjok.domain.PetSitterDTO">
+<select id="getSitterList" parameterType="banjjok_Hotel.domain.PetSitterDTO" resultType="banjjok_Hotel.domain.PetSitterDTO">
 	select *
 	from(
 		select ROWNUM RN, <include refid="baseColumn2" />
@@ -30,16 +30,16 @@
 	)
 	
 </select>
-<update id="updateSitter" parameterType="banjjok.domain.PetSitterDTO">
+<update id="updateSitter" parameterType="banjjok_Hotel.domain.PetSitterDTO">
 	update pet_sitter 
 	set SITTER_NAME=#{sitterName}, SITTER_IMG=#{sitterImg}, SITTER_PH=#{sitterPh}, SITTER_OFF=#{sitterOff}
 	where SITTER_ID = #{sitterId}
 </update>
-<!-- <delete id="sitterDel" parameterType="banjjok.domain.PetSitterDTO"> -->
+<!-- <delete id="sitterDel" parameterType="banjjok_Hotel.domain.PetSitterDTO"> -->
 <!-- 	delete from pet_sitter -->
 <!-- 	where SITTER_ID = #{sitterId} -->
 <!-- </delete> -->
-<update id="sitterDel" parameterType="banjjok.domain.PetSitterDTO">
+<update id="sitterDel" parameterType="banjjok_Hotel.domain.PetSitterDTO">
 	update pet_sitter 
 	set SITTER_USE = '2'
 	where SITTER_ID = #{sitterId}

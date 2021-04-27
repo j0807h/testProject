@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="banjjok.mapper.MemberMapper">
+<mapper namespace="banjjok_Hotel.mapper.MemberMapper">
 <sql id="memColumn">
 	MEM_ID, MEM_PW, MEM_MOBILE, MEM_NAME, MEM_EMAIL, REGIST_DT, NIC_NAME, mem_use
 </sql>
 <sql id="selectColumn">
 	MEM_ID MEMID, MEM_PW MEMPW, MEM_MOBILE MEMMOBILE, MEM_NAME MEMNAME, MEM_EMAIL MEMEMAIL, REGIST_DT REGISTDT, NIC_NAME NICNAME, mem_use memuse
 </sql>
-<insert id="insertMem" parameterType="banjjok.domain.MemberDTO">
+<insert id="insertMem" parameterType="banjjok_Hotel.domain.MemberDTO">
 	insert into member (<include refid="memColumn" />)
 	values(#{memId}, #{memPw}, #{memMobile}, #{memName}, #{memEmail}, sysdate, #{nicName}, 1)
 </insert>
-<select id="getUserList" parameterType="banjjok.domain.MemberDTO" resultType="banjjok.domain.MemberDTO">
+<select id="getUserList" parameterType="banjjok_Hotel.domain.MemberDTO" resultType="banjjok_Hotel.domain.MemberDTO">
 	select *
 	from (
 		select ROWNUM RN, <include refid="selectColumn" />

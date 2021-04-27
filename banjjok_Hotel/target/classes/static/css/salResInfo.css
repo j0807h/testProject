@@ -1,0 +1,137 @@
+@charset "UTF-8";
+.content {
+  width: 620px;
+  margin: 0 auto 100px;
+  background: #ed820e;
+  font-size: 16px;
+}
+
+.content h2 {
+  padding: 30px 0;
+  font-size: 24px;
+  
+}
+
+.content h2 span {
+  padding-left: 10px;
+  font-size: 24px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.d-day {
+  float: right;
+  padding-right: 25px;
+}
+
+.fa-calendar-alt {
+  padding-right: 10px;
+}
+
+.payment-area h2 {
+  background: none;
+}
+
+.reservation-area {
+  padding: 20px 10px 0;
+  border-radius: 20px 20px 0 0;
+  background: #fff;
+}
+
+.content ul li {
+  padding: 20px 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+ul li:last-child {
+  border: none;
+}
+
+.title {
+  color: #808080;
+  display: inline-block;
+  width: 150px;
+}
+
+.mem-info {
+  padding: 30px 0 30px 30px; 
+  background: #fff;
+}
+
+.mem-info ul {
+  background: #eee;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+
+.mem-info li {
+  padding: 10px 0;
+  border: none;
+}
+
+.mem-info .title {
+  width: 100px;
+}
+
+.payment-area {
+  background: #fff;
+}
+
+.payment-area h2 {
+  border-bottom: 1px solid #eee;
+  font-size: 18px;
+  padding-left: 6px;
+}
+
+.payment-area ul {
+  padding: 20px 0;
+}
+
+.payment-area ul li {
+  border: none;
+  padding: 10px 0;
+  text-align: right;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.payment-area li:first-child {
+  font-weight: normal;
+}
+
+.payment-area .title {
+  float: left;
+  text-align: left;
+  padding-left: 10px;
+  font-weight: normal;
+}
+
+.payment-area .pay-method {
+  padding-right: 10px;
+  font-weight: normal;
+  color: #808080;
+}
+
+.btn-area {
+  background: #fff;
+  padding: 100px 0 0;
+  text-align: center;
+}
+
+.btn-area a {
+  /* text-align: center; */
+  padding: 10px 50px;
+  border: 1px solid #333;
+  color: #fff;
+  background: #333;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 5px;
+  /* margin: 0 auto; */
+}
+
+.btn-area .modify {
+  background: #fff;
+  color: #333;
+  margin-right: 10px;
+}

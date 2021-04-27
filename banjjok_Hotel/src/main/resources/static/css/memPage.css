@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+input:focus {
+	outline: none;
+}
+.content {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+/*내용 */
+.contentSelectWrap {
+	width: 1140px;
+	display:inline-block;
+	margin: 0 auto;
+	padding-top: 10px;
+}
+
+.contentSelectWrap div {
+	width: 450px;
+	height: 300px;
+	/*display : inline-flex;*/
+	border: 1px solid #e1e1e1;
+	margin: 10px;
+	padding: 30px 24px;
+	float: left;
+	position: relative;
+	text-align: left;
+}
+
+.contentSelectWrap .orderInfo {
+	margin-bottom: 50px;
+}
+
+div h2 {
+	font-size: 24px;
+}
+
+div p {
+	padding: 20px 0;
+}
+
+.contentSelectWrap div a {
+	display: inline-block;
+	width: 115px;
+	line-height: 35px;
+	border: 1px solid #e1e1e1;
+	border-radius: 3px;
+	text-align: center;
+	margin: 150px 0 0;
+}
+
+.modify {
+	background-color: #80BA8E;
+	border: #80BA8E;
+	border-color: #80BA8E;
+	color: #fff;
+	font-weight: 700;
+}
+
+.bthArea {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+}

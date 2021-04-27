@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTO Mapper 3.0//EN"
 	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="banjjok.mapper.RoomMapper">
+<mapper namespace="banjjok_Hotel.mapper.RoomMapper">
 <sql id="baseColumn">
 	ROOM_CODE, ROOM_NAME, ROOM_IMG, ROOM_PRICE, ROOM_DESC, ROOM_PW, ROOM_USE
 </sql>
@@ -15,11 +15,11 @@
 	select  to_char(sysdate,'YYMMDD') || LPAD(ROOM_SEQ.NEXTVAL, 3, 0) 
 	from DUAL
 </select>
-<insert id="insertRoom" parameterType="banjjok.domain.RoomDTO">
+<insert id="insertRoom" parameterType="banjjok_Hotel.domain.RoomDTO">
 	insert into ROOM ( <include refid="baseColumn" />  )
 	values( #{roomCode}, #{roomName}, #{roomImg}, #{roomPrice}, #{roomDesc}, #{roomPw}, '1' )
 </insert>
-<select id="getRoomList" parameterType="banjjok.domain.RoomDTO" resultType="banjjok.domain.RoomDTO">
+<select id="getRoomList" parameterType="banjjok_Hotel.domain.RoomDTO" resultType="banjjok_Hotel.domain.RoomDTO">
 	select * 
 	from( select ROWNUM RN, <include refid="baseColumn2" /> 
 		from ( select <include refid="baseColumn" />
@@ -37,12 +37,12 @@
 			)
 		)
 </select>
-<update id="updateRoom" parameterType="banjjok.domain.RoomDTO" >
+<update id="updateRoom" parameterType="banjjok_Hotel.domain.RoomDTO" >
 	update ROOM
 	set ROOM_IMG = #{roomImg}, ROOM_PRICE = #{roomPrice}, ROOM_DESC = #{roomDesc}
 	where ROOM_NAME = #{roomName}
 </update>
-<update id="roomDel" parameterType="banjjok.domain.RoomDTO" >
+<update id="roomDel" parameterType="banjjok_Hotel.domain.RoomDTO" >
 	update ROOM
 	set ROOM_USE = '2'
 	where ROOM_NAME = #{roomName}

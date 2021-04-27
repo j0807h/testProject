@@ -1,0 +1,247 @@
+@charset "UTF-8";
+.content {
+  width: 620px;
+  margin: 0 auto 100px;
+}
+
+.titleWrap {
+  text-align: center;
+}
+
+.titleWrap .title {
+  margin-top: 30px;
+}
+
+.titleWrap .title h2 {
+  font-size: 2em;
+}
+
+.titleWrap .fieldDesc {
+  padding-top: 10px;
+}
+
+.selectedServiceArea, .selectDateArea, .selectDesignerArea {
+  padding: 30px 6px;
+}
+
+.selectedServiceArea, .selectDateArea {
+  border-bottom: 7px solid #eee;
+}
+
+.select-title, .select-title-price {
+  padding-bottom: 15px;
+  margin-bottom:  15px;
+  border-bottom:  1px solid #eee; 
+}
+
+.select-title-price {
+	margin-top: 25px;
+}
+
+input[type="text"]:focus {
+	outline: none;
+}
+
+input[type="text"]{
+	border : none;
+	text-align: right;
+	width: 15%;
+	padding-right: 5px;
+}
+
+.selectedServiceArea li:first-child {
+  margin-bottom: 15px;
+}
+
+.selectedServiceArea li span {
+  /* margin-right: 20px; */
+  width: 100px;
+  display: inline-block;
+  color: #808080;
+}
+
+.calendar {
+
+}
+
+.calendar .month {
+  text-align: center;
+  margin: 0 auto 10px;
+}
+
+.calendar .calendar-month {
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+.calendar .calendar-month::before {
+  content: "";
+  display: block;
+  border-bottom: 1px solid #333;
+}
+
+.calendar .calendar-month li {
+  padding: 10px;
+  width: 32px;
+  height: 30px;
+  text-align: center;
+  /* border: 1px solid #333; */
+  display: inline-block;
+}
+
+.none-current {
+  color: #e1e1e1;
+}
+
+.select-date {
+  display: inline-block;
+  width: 100%;
+  line-height: 30px;
+  background: #808080;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.date-current input[type="radio"] {
+	display:none;
+}
+
+.date-current input[type="radio"] + span{
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	border-radius: 50%;
+	width: 100%;
+	line-height: 30px;
+	text-align: center;
+	background: none;
+	padding: 1px;
+}
+
+.date-current input[type="radio"]:checked +span{
+	background: #333;
+	color: #fff;
+}
+
+.select-designer {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #e1e1e1;
+	margin-bottom: 10px;
+}
+
+/* .designer-list { */
+/* 	display: none; */
+/* } */
+
+/* .date-current input[type="radio"]:checked .designer-list { */
+/* 	display: block; */
+/* } */
+
+.designer-img {
+	display: inline-block;
+	background: #eee;
+	width: 100px;
+	height: 100px;
+	border: none;
+	border-radius: 50%;
+}
+
+.select-designer {
+	position: relative;
+}
+
+.designer-Area {
+	position: absolute;
+	top: 50px;
+	left : 120px;
+	transform: translateY(-50%);
+}
+
+.designer-name {
+	display: block;
+	font-weight: 700;
+	padding-bottom: 4px;
+}
+
+.designer-desc {
+	font-size: 14px;
+	color: #808080;
+}
+
+.time-area {
+	margin: 20px 0 ;
+}
+
+.time-area ul li {
+	display: inline;
+}
+
+.time-area .off {
+	color : red;
+	font-size : 14px;
+	border-radius: 15px;
+	background: #eee;
+	padding: 5px 15px;
+	width: 120px;
+}
+
+.box-radio-input input[type="radio"] {
+	display:none;
+	
+}
+
+.box-radio-input input[type="radio"] + span{
+	cursor: pointer;
+	border: none;
+	border-radius: 15px;
+	background: #eee;
+	padding: 5px 15px;
+}
+
+.box-radio-input input[type="radio"]:checked +span{
+	background: #333;
+	color: #fff;
+}
+
+/* 버튼  */
+.btn-wrap {
+	padding-left: 6px;
+	position: relative;
+	margin-top: 30px;
+}
+
+.price-area span{
+	display: block;
+	font-weight: 500;
+	color: #808080;
+}
+
+.price-area .price {
+	font-size: 18px;
+	font-weight: 700;
+	color: #333;
+}
+
+.btn-area {
+	position: absolute;
+	top: 0;
+	right: 0;
+/* 	transform: traslateY(-50%); */
+}
+
+.btn-area input {
+	width: 200px;
+	height: 50px;
+	border: none;
+	border-radius:5px;
+	font-size: 18px;
+	font-weight: 900;
+	color: #fff;
+	background: #333;
+}
+
+textarea  {
+	width: 100%;
+	height: 100px;
+	resize: none;
+	padding: 10px 0;}

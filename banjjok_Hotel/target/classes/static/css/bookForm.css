@@ -1,0 +1,54 @@
+@charset "UTF-8";
+	.selectDateArea .calendar-month{ box-sizing:initial; }
+	.select-title .calendar-chk{
+		position : middle;
+	}
+	
+	.calendar-chk {
+		text-align:center;
+		display:inline-block;
+		list-style: none;
+		
+	}
+	.calendar-chk input {
+		text-align : center;
+	}
+  	 
+ 	.chk-area { 
+		position:relative;
+	/* 이름 옆 */	
+/* 		left : 142px; */
+/* 		bottom : 78px; */
+	/* 이름 아래 */
+ 		left : 70px;
+ 		bottom : 50px;
+ 	} 
+	
+	.chk-area ul li {
+		display: inline;
+	}
+	
+	.box-radio-input input[type="radio"] {
+		display:none;
+		
+	}
+	
+	.box-radio-input input[type="radio"] + span{
+		cursor: pointer;
+		border: none;
+		border-radius: 15px;
+		background: #eee;
+		padding: 5px 15px;
+	}
+	
+	.box-radio-input input[type="radio"]:checked +span{
+		background: #333;
+		color: #fff;
+	}
+	.btn-wrap {
+		padding-left: 6px;
+	    position: relative;
+	    margin-top: 30px;
+	    margin-bottom: 80px;
+	    bottom: 50px;
+	}

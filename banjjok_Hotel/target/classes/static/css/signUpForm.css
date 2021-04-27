@@ -1,0 +1,135 @@
+@charset "UTF-8";
+header {
+  /* background: #e1e1e1; */
+  padding: 10px 50px 30px;
+  margin: 0 auto;
+  height: 80px;
+  border-bottom: 2px solid #e1e1e1;
+  position: relative;
+}
+h2 {
+/* 	margin-top: 50px; */
+	padding: 0 0 20px;
+	text-align: center;
+	border-bottom: 1px solid #e1e1e1;
+	font-size: 24px;
+}
+.logoImage {
+	border: none;
+	padding: 0;
+	margin: 0 auto;
+	width: 300px;
+	height: 100px;
+	display: block;
+	background-size: 300px 100px;
+	background-repeat: no-repeat;
+}
+.text_center
+{
+    text-align: center;
+}
+
+.panel-body-inner
+{
+    padding-top: 35px;
+    padding-bottom: 0px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.panel-body-inner-1
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+
+.account-text-form-1
+{
+    padding: 25px;
+    background-color: #F9F9F9;
+    border: solid 1px #E5E5E5;
+}
+
+.panel-body-inner-box-1
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 6px;
+}
+
+.panel-body-inner-box-2
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 6px;
+    padding-right: 0px;
+}
+
+.panel-body-set
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.panel-body-inner-box-3
+{
+    padding-top: 20px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 10px;
+}
+
+.panel-body-inner-box-3 p
+{
+    margin-left: 30px;
+}
+
+.account-text-form-2
+{
+    padding: 25px;
+    background-color: #F9F9F9;
+    border: solid 1px #E5E5E5;
+    margin: 0px;
+}
+
+.panel-body-inner-box-4
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.panel-body-inner-box-4 h3
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.account-text-form-3
+{
+    padding: 25px;
+    background-color: #F9F9F9;
+    border: solid 1px #E5E5E5;
+}
+
+.btn-success
+{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background: linear-gradient(125deg,#04B486,#DA81F5,#FFBF00);
+ 	background-position: left;
+}
+
+.bottom-padding
+{
+    padding-bottom: 20px;
+}

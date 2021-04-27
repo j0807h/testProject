@@ -1,0 +1,76 @@
+/* h2 */
+h2{font-size:30px}
+h2{color:#fff; font-family:"맑은고딕";font-weight:400;margin:10px 0}
+
+/* w3-row-padding */ /* .w3-container */
+.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+.w3-row-padding,.w3-row-padding>.w3-half,.w3-row-padding>.w3-third,.w3-row-padding>.w3-twothird,.w3-row-padding>.w3-threequarter,.w3-row-padding>.w3-quarter,.w3-row-padding>.w3-col{padding:0 8px}
+.w3-container,.w3-panel{padding:0.01em 16px}
+
+/* w3-third */
+.w3-col,.w3-half,.w3-third,.w3-twothird,.w3-threequarter,.w3-quarter{float:left;width:50%}
+.w3-col.m4,.w3-third{width:33.33333%}
+
+
+/* w3-white */
+.w3-white,.w3-hover-white:hover{color:#000!important;background-color:#fff!important}
+
+
+/* w3-text-grey */
+.w3-text-grey,.w3-hover-text-grey:hover,.w3-text-gray,.w3-hover-text-gray:hover{color:#757575!important}
+
+
+/* w3-card-4 */
+.w3-card-4,.w3-hover-shadow:hover{box-shadow:0 4px 10px 0 rgba(0,0,0,0.2),0 4px 20px 0 rgba(0,0,0,0.19)}
+
+
+/* w3-display-container */
+.w3-tooltip,.w3-display-container{position:relative}
+.w3-display-container:hover .w3-display-hover{display:block}
+.w3-display-container:hover span.w3-display-hover{display:inline-block}
+.w3-display-hover{display:none}
+
+
+/* w3-display-bottomleft */
+.w3-display-bottomleft{position:absolute;left:0;bottom:0}
+
+
+/* w3-container */
+.w3-container:after,.w3-container:before,.w3-panel:after,.w3-panel:before,.w3-row:after,.w3-row:before,.w3-row-padding:after,.w3-row-padding:before,
+.w3-cell-row:before,.w3-cell-row:after,.w3-clear:after,.w3-clear:before,.w3-bar:before,.w3-bar:after{content:"";display:table;clear:both}
+
+/* w3-text-black */
+.w3-text-black,.w3-hover-text-black:hover{color:#000!important}
+
+/*  .w3-margin-right */
+ .w3-margin-right{margin-right:16px!important}
+
+/* w3-large */
+w3-large{font-size:18px!important}
+
+/* w3-text-teal */
+.w3-text-teal,.w3-hover-text-teal:hover{color:#009688!important}
+
+/* fa */
+.fa{display:inline-block;font:normal normal normal 14px/1 FontAwesome;font-size:inherit;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.fa-lg{font-size:1.33333333em;line-height:.75em;vertical-align:-15%}
+/* fa-fw */
+.fa-fw{width:1.28571429em;text-align:center}
+
+/* fa-home */
+fa-home:before{content:"\f015"}
+
+/* .fa-briefcase */
+.fa-briefcase:before{content:"\f0b1"}
+
+/* fa-envelope */
+.fa-envelope:before{content:"\f0e0"}
+
+/* .fa-phone */
+.fa-phone:before{content:"\f095"}
+
+.fa-home{
+	content:"\f015"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}

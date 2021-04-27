@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/* footer */
+footer {
+  margin: 0 auto;
+  /* background: #eee; */
+  background: #eadfcd;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 0;
+}

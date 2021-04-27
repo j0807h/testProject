@@ -1,0 +1,90 @@
+@charset "UTF-8";
+.content {
+  width: 600px;
+  margin: 0 auto 100px;
+}
+
+.menu-title-area {
+  margin-top: 30px;
+  border-bottom: 7px solid #eee;
+  padding-bottom: 25px;
+  padding-left: 6px;
+}
+
+.menu-title span {
+  font-weight: 900;
+  font-size: 24px;
+}
+
+.menu-price {
+  margin-top: 8px;
+  margin-bottom: 25px;
+}
+
+.menu-price span {
+  font-size: 18px;
+}
+
+.select-area {
+ padding-left: 6px;
+ margin: 25px 0;
+}
+
+.select-area li{
+  display: inline;
+  padding: 10px;
+}
+
+.select-area li:first-child {
+  padding: 0;
+}
+
+.information-area {
+  border-bottom: 7px solid #eee;
+  padding-left: 6px;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.information-area li {
+  margin-bottom: 15px;
+}
+
+.menu-info li {
+  margin-bottom: 3px;
+}
+
+.option-area {
+  color: #808080;
+}
+
+.option-area span {
+  padding-right: 9px;
+}
+
+.reserve-button, .modify-button {
+  display: block;
+  text-align: center;
+  width: 80%;
+  background: orange;
+  padding: 13px 0;
+  margin: 0 auto;
+  color: #fff;
+  font-weight: 900;
+  border-radius: 7px;
+}
+
+.fa-exclamation-circle:before {
+	content:"\f06a"; 
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+}
+
+.modify-button {
+	margin-top: 10px;
+}
+
+.reserve-button-area a:hover {
+	background: #808080;
+	text-decoration: none;
+}
