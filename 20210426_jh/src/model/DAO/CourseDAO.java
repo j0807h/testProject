@@ -120,4 +120,20 @@ public class CourseDAO {
 		}
 		return dto;
 	}
+
+	public CourseDTO courseDel(String id) {
+		CourseDTO dto = new CourseDTO();
+		try {
+			con = getconnection();
+			sql = " delete * from course_tbl where id=? ";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		return dto;
+	}
 }

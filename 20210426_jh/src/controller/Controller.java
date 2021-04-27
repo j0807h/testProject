@@ -38,8 +38,10 @@ public class Controller extends HttpServlet {
 			RequestDispatcher disp = req.getRequestDispatcher("cModify.jsp");
 			disp.forward(req, resp);
 		} else if(command.equals("/courseDelete.jh")) {
-//			RequestDispatcher disp = req.getRequestDispatcher("cDelete.jsp");
-//			disp.forward(req, resp);
+			String id = req.getParameter("id");
+			CourseDAO dao = new CourseDAO();
+			CourseDTO dto = dao.courseDel(id);
+			resp.sendRedirect("courseList.jh");
 		} else if(command.equals("/lecturerList.jh")) {
 			RequestDispatcher disp = req.getRequestDispatcher("lList.jsp");
 			disp.forward(req, resp);

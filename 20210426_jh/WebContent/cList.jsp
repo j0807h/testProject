@@ -16,7 +16,7 @@
 </header>
 <section>
 	<span>총 ${count }개의 교과목이 있습니다.</span>
-	<form action="">
+	<form action="courseRegist.jh" method="post" name="frm">
 		<table border="1">
 			<tr>
 				<th>과목코드</th>
@@ -61,6 +61,7 @@
 			</tr>
 			<% } %>
 		</table>
+		<input type="submit" value="작성" />
 	</form>
 </section>
 <footer>
