@@ -11,7 +11,7 @@
 	<h3>수강신청 도우미 사이트</h3>
 </header>
 <section>
-	<form action="registAc.jh" method="post" name="frm">
+	<form action="registAc.jh`" method="post" name="frm">
 		<table border="1">
 		<caption><h2>교과목 추가</h2></caption>
 			<tr>

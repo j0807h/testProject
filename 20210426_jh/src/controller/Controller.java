@@ -48,6 +48,12 @@ public class Controller extends HttpServlet {
 		} else if(command.equals("/lecturerRegist.jh")) {
 			RequestDispatcher disp = req.getRequestDispatcher("lRegist.jsp");
 			disp.forward(req, resp);
+		} else if(command.equals("/registAc.jh")) {
+			req.setCharacterEncoding("utf-8");
+			System.out.println("등록안돼?");
+			CourseDAO dao = new CourseDAO();
+			dao.insertCourse(req);
+			resp.sendRedirect("courseList.jh");
 		} else if(command.equals("/lecturerDelete.jh")) {
 //			RequestDispatcher disp = req.getRequestDispatcher("lDelete.jsp");
 //			disp.forward(req, resp);

@@ -8,6 +8,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import model.DTO.CourseDTO;
 
 public class CourseDAO {
@@ -136,4 +138,29 @@ public class CourseDAO {
 		}
 		return dto;
 	}
+
+	public void insertCourse(HttpServletRequest req) {
+		try {
+			con = getconnection();
+			sql = " insert into course_tbl "
+					+ " values( ?,?,?,?,?,?,? ) ";
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, req.getParameter("id"));
+			pstmt.setString(2,req.getParameter("name") );
+			pstmt.setInt(3, Integer.parseInt(req.getParameter("lecturer")));
+			pstmt.setString(4, req.getParameter("credit"));
+			pstmt.setInt(5, Integer.parseInt(req.getParameter("week")));
+			pstmt.setInt(6, Integer.parseInt(req.getParameter("StartHour")));
+			pstmt.setInt(7, Integer.parseInt(req.getParameter("endHour")));
+			pstmt.executeQuery();
+			System.out.println("등록");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			close();
+		}
+		
+	}
+
 }
