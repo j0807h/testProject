@@ -1,0 +1,46 @@
+@charset "UTF-8";
+* {
+	padding : 0;
+	margin : 0;
+}
+body {
+	margin : 0 auto;
+	float : middle;
+}
+header {
+	padding : 15px 10px;
+	background: #848484;
+	color : #fff;
+}
+h2, h3{
+	text-align : center;
+	margin : 10px;
+}
+nav {
+	padding : 5px 10px;
+	background-color: #c8c8c8;
+}
+a{
+	text-decoration: none;
+	margin: 15px;
+	color : #fff;
+}
+section{
+	padding: 10px;
+	padding-bottom:350px;
+	background-color: #e6e6e6;
+}
+table {
+	margin : 0 auto;
+	text-align:center;
+	padding : 10px, 0;
+}
+tr, td {
+	text-align:center;
+}
+footer {
+	padding : 20px 10px;
+	background: #848484;
+	color : #fff;
+	text-align: center;
+}
