@@ -55,7 +55,8 @@ public class CourseDAO {
 		List<CourseDTO> list = new ArrayList<CourseDTO>();
 		try {
 			con = getconnection();
-			sql = " select * from course_tbl ";
+//			sql = " select * from course_tbl ";
+			sql = " select id, c.name, credit, l.name, WEEK, START_HOUR, END_END  from course_tbl c, lecturer_tbl l where lecturer = idx  ";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {

@@ -34,17 +34,7 @@
 				<td><%=dto.getId() %></td>
 				<td><%=dto.getName() %></td>
 				<td><%=dto.getCredit() %></td>
-				<td>
-					<%
-						if(dto.getLecturer().equals("1")){out.print("김교수");}
-						if(dto.getLecturer().equals("2")){out.print("이교수");}
-						if(dto.getLecturer().equals("3")){out.print("박교수");}
-						if(dto.getLecturer().equals("4")){out.print("우교수");}
-						if(dto.getLecturer().equals("5")){out.print("최교수");}
-						if(dto.getLecturer().equals("6")){out.print("강교수");}
-						if(dto.getLecturer().equals("7")){out.print("황교수");}
-					%>
-				</td>
+				<td><%=dto.getLecturer()%></td>
 				<td>
 					<%
 						if(dto.getWeek() == 1){out.print("월");}
