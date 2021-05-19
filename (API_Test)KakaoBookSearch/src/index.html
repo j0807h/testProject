@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>도서검색</title>
+</head>
+<body>
+<h1>도서 검색</h1>
+<input type="text" id="bookName" />
+<button id="search">검색</button>
+<p id="title"></p>
+<p id="thumbnail"></p>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script>
+        $(function(){
+            $("#search").click(function (){
+                
+                $.ajax({
+                    method: "GET",
+                    url: "https://dapi.kakao.com/v3/search/book?target=title",
+                    data: { query : $("#bookName").val() },
+                    headers:{Authorization: "KakaoAK 7a93836c89cde108d80137fdcbb263a5"}
+                })
+                .done(function(msg) {
+                    console.log(msg.documents[0].title);
+                    console.log(msg.documents[0].thumbnail);
+                    $( "#title" ).append( "<strong>"+ "[ " + msg.documents[0].title+" ]"+"</strong>" );
+                    $( "#thumbnail" ).append( "<img src='"+msg.documents[0].thumbnail+"'/>" );
+                   
+                });
+            })
+        });
+    </script>
+</body>
+</html>
