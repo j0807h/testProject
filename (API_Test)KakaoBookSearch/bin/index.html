@@ -8,8 +8,7 @@
 <h1>도서 검색</h1>
 <input type="text" id="bookName" />
 <button id="search">검색</button>
-<p id="title"></p>
-<p id="thumbnail"></p>
+<p></p>
 <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
 <script>
         $(function(){
@@ -24,8 +23,8 @@
                 .done(function(msg) {
                     console.log(msg.documents[0].title);
                     console.log(msg.documents[0].thumbnail);
-                    $( "#title" ).append( "<strong>"+ "[ " + msg.documents[0].title+" ]"+"</strong>" );
-                    $( "#thumbnail" ).append( "<img src='"+msg.documents[0].thumbnail+"'/>" );
+                    $( "p" ).append( "<strong>"+ "[ " + msg.documents[0].title+" ]"+"</strong>" );
+                    $( "p" ).append( "<img src='"+msg.documents[0].thumbnail+"'/>" );
                    
                 });
             })
